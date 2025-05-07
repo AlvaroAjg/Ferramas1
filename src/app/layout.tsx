@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 import { CartProvider } from "../../components/cartContext";
 
 export const metadata = {
@@ -11,9 +12,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
-        <CartProvider> {/* 👈 El carrito envuelve TODO */}
-          <Navbar /> {/* Navbar visible en todas las páginas */}
-          <main className="max-w-7xl mx-auto p-4">{children}</main> {/* Contenido principal */}
+        <CartProvider>
+          <Navbar />
+          <main className=" mx-auto p-4">
+            {children}
+          </main>
+
+         
+          <Footer />
         </CartProvider>
       </body>
     </html>

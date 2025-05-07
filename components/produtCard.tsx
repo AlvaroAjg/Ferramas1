@@ -27,7 +27,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
   };
 
   return (
-    <div className="bg-black shadow-md rounded-lg overflow-hidden flex flex-col relative">
+    <div className=" bg-black shadow-md rounded-lg overflow-hidden flex flex-col relative">
       <Image
         src={producto.imagen}
         alt={producto.nombre}
@@ -58,7 +58,7 @@ export default function ProductCard({ producto }: { producto: Producto }) {
   );
 }
 
-// Animación del Toast
+
 const style = `
 @keyframes fadeInUp {
   from {

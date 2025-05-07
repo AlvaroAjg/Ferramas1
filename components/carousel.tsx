@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/esmeril.webp",
+  "/images/fotocarousel.jpg",
   "/images/taladro.webp",
   "/images/carusel3.webp",
   "/images/carusel4.webp"
@@ -23,29 +23,31 @@ export default function Carousel() {
     );
   };
 
-  // Carrusel automático
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Cambia de imagen cada 3 segundos
+    }, 3000);
 
-    return () => clearInterval(interval); // Limpiar el intervalo al desmontar el componente
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      {/* Imagen del Carrusel */}
-      <div className="overflow-hidden rounded-lg">
-        <Image
-          src={images[currentIndex]}
-          alt={`Imagen ${currentIndex + 1}`}
-          width={1200}
-          height={600}
-          className="object-cover w-full h-96"
-        />
+    <div className="relative w-full">
+      {/* Contenedor del carrusel */}
+      <div className="relative w-full h-[550px]"> {/* Altura ajustada al gusto */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          {/* Imagen del carrusel que cubre todo el contenedor */}
+          <Image
+            src={images[currentIndex]}
+            alt={`Imagen ${currentIndex + 1}`}
+            layout="fill" // La imagen ocupa todo el espacio disponible
+            objectFit="cover" // La imagen cubre el contenedor sin distorsionarse
+            className="w-full h-full" // Asegura que la imagen ocupe todo el contenedor
+          />
+        </div>
       </div>
 
-      {/* Botones de navegación */}
+      {/* Botones para avanzar y retroceder */}
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200 transition"

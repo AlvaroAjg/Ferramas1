@@ -8,7 +8,7 @@ export default function Filters({
   onSelectCategory: (category: string | null) => void;
 }) {
   return (
-    <div className="flex justify-center mb-8 p-6">
+    <div className="flex justify-center p-6">
       <select
         onChange={(e) =>
           onSelectCategory(e.target.value === "" ? null : e.target.value)
