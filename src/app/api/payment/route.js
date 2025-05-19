@@ -9,9 +9,9 @@ export async function POST(request) {
   try {
     
     const body = await request.json();
-    console.log("backend: ",body)
+    
     const { amount, userId } = body;
-
+    
     const buyOrder = Math.floor(Math.random() * 1000000).toString();
     const sessionId = userId.toString();
     const returnUrl = 'http://localhost:3000/retorno'; 

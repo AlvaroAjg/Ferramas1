@@ -25,6 +25,8 @@ const CartContext = createContext<CartContextType | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cart, setCart] = useState<Producto[]>([]);
+  console.log(`[CART CONTEXT]`)
+  console.log(cart)
 
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");

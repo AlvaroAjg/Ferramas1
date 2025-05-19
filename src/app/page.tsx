@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="p-4">
-      {/* Cuadro de bienvenida con sombra profunda */}
+      
       <div className="bg-gray-300 text-center py-12 px-4 rounded-xl mb-12 border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
         <div className="max-w-3xl mx-auto space-y-4">
           <h1 className="text-5xl sm:text-6xl font-extrabold text-red-600">
