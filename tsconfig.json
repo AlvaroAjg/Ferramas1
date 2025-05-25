@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/payment/pago.js", "src/app/api/convert/route.ts", "env.local"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/payment/pago.js", "src/app/api/convert/route.ts", "env.local", "src/app/api/envio/route.js"],
   "exclude": ["node_modules"]
 }
