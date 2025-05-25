@@ -1,5 +1,5 @@
 export async function convertFromCLP(amount: number, toCurrency: string, fromCurrency: string) {
-    const accessKey = "9a1fb72437c2c2985e3abc004b85e118";
+    const accessKey = "a68d118290947bdd347acd6d8b1b5803";
   
     const url = `https://api.exchangerate.host/convert?access_key=${accessKey}&from=${fromCurrency}&to=${toCurrency}&amount=${amount}`;
   

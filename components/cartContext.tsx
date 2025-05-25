@@ -62,7 +62,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   };
 
   const clearCart = () => {
-    setCart([]); // Vaciar el carrito
+    setCart([]);
   };
 
   return (
