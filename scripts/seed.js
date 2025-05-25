@@ -1,7 +1,7 @@
 import path from "path";
 import sqlite3 from "sqlite3";
 
-const dbPath = path.join(process.cwd(), "db");
+const dbPath = path.join(process.cwd(), "db.db");
 console.log(`RUTA DB: ${dbPath}`);
 
 export const db = new sqlite3.Database(

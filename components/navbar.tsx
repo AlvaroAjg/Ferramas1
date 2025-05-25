@@ -2,6 +2,7 @@
 
     import Link from "next/link";
     import { ShoppingCart } from "lucide-react";
+import UserDisplay from "@/components/UserDisplay";
 
     export default function Navbar() {
     return (
@@ -16,6 +17,7 @@
            
             <div className="flex items-center space-x-6">
             
+            <UserDisplay />
 
             <Link href="/carrito">
                 <button className="flex items-center bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition">
@@ -23,6 +25,9 @@
                 Carrito
                 </button>
             </Link>
+
+            
+
             </div>
         </div>
         </nav>
