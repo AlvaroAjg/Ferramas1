@@ -33,21 +33,21 @@ export default function Carousel() {
 
   return (
     <div className="relative w-full">
-      {/* Contenedor del carrusel */}
-      <div className="relative w-full h-[550px]"> {/* Altura ajustada al gusto */}
+      
+      <div className="relative w-full h-[550px]"> 
         <div className="absolute top-0 left-0 w-full h-full">
-          {/* Imagen del carrusel que cubre todo el contenedor */}
+          
           <Image
             src={images[currentIndex]}
             alt={`Imagen ${currentIndex + 1}`}
-            layout="fill" // La imagen ocupa todo el espacio disponible
-            objectFit="cover" // La imagen cubre el contenedor sin distorsionarse
-            className="w-full h-full" // Asegura que la imagen ocupe todo el contenedor
+            layout="fill" 
+            objectFit="cover" 
+            className="w-full h-full" 
           />
         </div>
       </div>
 
-      {/* Botones para avanzar y retroceder */}
+      
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200 transition"

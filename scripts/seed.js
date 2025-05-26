@@ -13,13 +13,13 @@ export const db = new sqlite3.Database(
       return;
     }
     console.log("¡Conectado a la base de datos!");
-    seed(); // Arranca el seeding justo después de conectar
+    seed(); 
   }
 );
 
 function seed() {
   db.serialize(() => {
-    // 1. Crear tablas si no existen
+    
     db.run(
       `
       CREATE TABLE IF NOT EXISTS usuarios (
@@ -54,7 +54,7 @@ function seed() {
       }
     );
 
-    // 2. Insertar usuarios de prueba
+    
     const stmtUsuarios = db.prepare(`
       INSERT INTO usuarios
         (name, email, password, rut)
@@ -81,7 +81,7 @@ function seed() {
       else console.log("Inserción de usuarios completada.");
     });
 
-    // 3. Preparar e insertar datos de productos
+    
     const stmt = db.prepare(`
       INSERT INTO productos
         (nombre, precio, stock, image, description, category)

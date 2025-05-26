@@ -30,9 +30,9 @@ export default function RegisterPage() {
         return;
       }
 
-      // Optionally, log the user in directly after registration
+      
       setUser(data.user);
-      router.push("/"); // Redirect to home page or dashboard
+      router.push("/"); 
     } catch (err) {
       console.error(err);
       setError("Hubo un error, intente de nuevo más tarde.");
@@ -41,7 +41,7 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError(""); 
     await registerUser();
   };
 
