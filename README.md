@@ -1,4 +1,4 @@
-# Proyecto Ferramas (Aplicación Universitaria)
+# Proyecto Ferramas
 
 Este proyecto es una aplicación web simple desarrollada para la asignatura Integracion de plataformas. Permite a los usuarios registrarse, iniciar sesión, simular procesos de pago y realizar conversión de divisas. La información del usuario logueado se gestiona globalmente para simular una sesión de usuario.
 
@@ -37,11 +37,11 @@ El proyecto está construido con las siguientes tecnologías principales:
 
 5.  **Simulación de Pagos con Transbank:**
     *   Integración con la API de Transbank para simular transacciones de pago.
-    *   (Se asume la existencia de rutas de API y componentes de frontend para esta funcionalidad).
+   
 
 6.  **Conversión de Divisas con Exchangerate API:**
     *   Uso de la API de Exchangerate para obtener tasas de cambio y permitir la conversión entre diferentes monedas.
-    *   (Se asume la existencia de rutas de API y componentes de frontend para esta funcionalidad).
+    
 
 ## Estructura del Proyecto (Simplificada)
 
